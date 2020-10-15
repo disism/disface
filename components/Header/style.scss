@@ -1,0 +1,15 @@
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+
+  button {
+    cursor: pointer;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+  }
+}

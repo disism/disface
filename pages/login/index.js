@@ -1,37 +1,58 @@
 import Head from 'next/head'
 import GoBack from "../../components/GoBack";
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const Login = () => {
-    return (
-        <div>
-            <Head>
-                <title>LoGin</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+  const router = useRouter()
+  const [username, setUsername] = useState("root")
+  const [password, setPassword] = useState("123")
+  const [loginError, setLoginError] = useState(false)
+  const handleLogin = () => {
+    if (username === "root" && password === "123") {
+      router.push("/iam")
+    } else {
+      setLoginError(true)
+    }
+  }
 
-            <main>
-                <GoBack />
+  return (
+    <div>
+      <Head>
+          <title>LoGin</title>
+          <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-                <h3>LOGIN</h3>
-                <label htmlFor="username">USERNAME</label>
-                <br/>
-                <input placeholder="username" name="username"/>
-                <br/>
+      <main>
+        <GoBack />
 
-                <label htmlFor="password">PASSWORD</label>
-                <br/>
-                <input
-                    type="password"
-                    placeholder="password"
-                    name="password"
-                />
+        <h3>LOGIN</h3>
+        <section>
+          <label htmlFor="username">USERNAME</label>
+          <br/>
+          <input type="text" placeholder="username" name="username"
+            value={username} onChange={e => setUsername(e.target.value)}
+          />
+          <br/>
 
-                <br/>
-                <button className="submit-button">SUBMIT</button>
-            </main>
-        </div>
-    )
+          <label htmlFor="password">PASSWORD</label>
+          <br/>
+          <input type="password" placeholder="password" name="password"
+            value={password} onChange={e => setPassword(e.target.value)}
+          />
+          <br/>
+
+          <p>{loginError ? "登录错误，账户名或密码错误" : null}</p>
+          <button
+            className="submit-button"
+            onClick={handleLogin}
+          >
+            SUBMIT
+          </button>
+        </section>
+      </main>
+    </div>
+  )
 }
 
 export default Login

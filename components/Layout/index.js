@@ -1,10 +1,10 @@
-import Header from "../Header"
+
 import React from "react";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <Header />
+
             <div style={{ margin: `1rem`}}>
                 {children}
             </div>

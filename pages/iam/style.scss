@@ -1,0 +1,9 @@
+
+.iam-header {
+  display: flex;
+  flex-direction: row;
+
+  :nth-child(2) {
+    margin-left: 1rem;
+  }
+}

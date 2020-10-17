@@ -1,21 +1,22 @@
 import Head from 'next/head'
 import GoBack from "../../components/GoBack";
 import React from "react";
+import "./style.scss"
 
-const Create = () => {
+const Created = () => {
   return (
     <div>
       <Head>
-        <title>Create</title>
+        <title>Created</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <GoBack />
       <main>
-        <GoBack />
-
+        <h1>创建您的内容</h1>
       </main>
     </div>
   )
 }
 
-export default Create
+export default Created

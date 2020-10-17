@@ -1,0 +1,41 @@
+
+.register-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.register-description {}
+
+.guide {
+  display: flex;
+  flex-direction: column;
+
+  .guide-submit {
+
+    :nth-child(2) {
+      margin-left: .3rem;
+    }
+  }
+}
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+
+  .account-edit-name {
+    display: flex;
+    flex-direction: row;
+    :nth-child(2){
+      margin-left: 1rem;
+    }
+  }
+
+  .account-bio {
+    textarea {
+      resize: none;
+      width: 51rem;
+    }
+  }
+}
+

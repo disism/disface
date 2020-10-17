@@ -11,7 +11,7 @@ class Godis extends App {
       <Layout>
         <motion.div
           key={router.route}
-          initial={{ scale: 0.95 }}
+          initial={{ scale: 0.6 }}
           animate={{ scale: 1 }}
           transition={{ duration: .1 }}
         >

@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <div>
         <Link href="/">
-            <button>Godis</button>
+            Godis
         </Link>
       </div>
       <div>

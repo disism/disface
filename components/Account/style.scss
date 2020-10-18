@@ -1,0 +1,31 @@
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+
+  .account-edit-name {
+    display: flex;
+    flex-direction: row;
+    :nth-child(2){
+      margin-left: 1rem;
+    }
+  }
+
+  .account-bio {
+    textarea {
+      resize: none;
+      width: 51rem;
+    }
+    @media only screen and (max-width: 426px) {
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 426px) {
+    input {
+      width: 100%;
+    }
+  }
+}

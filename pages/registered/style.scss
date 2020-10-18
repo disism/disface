@@ -3,6 +3,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media only screen and (max-width: 426px) {
+    flex-direction: column;
+    input {
+      width: 100%;
+    }
+  }
 }
 
 .register-description {}
@@ -19,23 +26,11 @@
   }
 }
 
-.account-form {
-  display: flex;
-  flex-direction: column;
-
-  .account-edit-name {
-    display: flex;
-    flex-direction: row;
-    :nth-child(2){
-      margin-left: 1rem;
-    }
-  }
-
-  .account-bio {
-    textarea {
-      resize: none;
-      width: 51rem;
+.new-channel {
+  @media only screen and (max-width: 426px) {
+    flex-direction: column;
+    input {
+      width: 100%;
     }
   }
 }
-

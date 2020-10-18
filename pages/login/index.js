@@ -1,7 +1,8 @@
 import Head from 'next/head'
-import GoBack from "../../components/GoBack";
+import GoBack from "../../components/Icons/back";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
+import "./style.scss"
 
 const Login = () => {
   const router = useRouter()
@@ -27,7 +28,7 @@ const Login = () => {
         <GoBack />
 
         <h3>LOGIN</h3>
-        <section>
+        <section className="login">
           <label htmlFor="username">USERNAME</label>
           <br/>
           <input type="text" placeholder="username" name="username"
@@ -43,8 +44,7 @@ const Login = () => {
           <br/>
 
           <p>{loginError ? "登录错误，账户名或密码错误" : null}</p>
-          <button
-            className="submit-button"
+          <button className="default-button"
             onClick={handleLogin}
           >
             SUBMIT

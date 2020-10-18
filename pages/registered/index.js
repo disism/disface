@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import React, { useState } from "react"
-import GoBack from "../../components/GoBack";
+import GoBack from "../../components/Icons/back";
 import "./style.scss"
 import { useRouter } from 'next/router'
 
@@ -53,7 +53,7 @@ const Registered = () => {
             />
             <br />
             <button
-              className="submit-button"
+              className="default-button"
               onClick={() => handleLogin()}
             >
               Registered

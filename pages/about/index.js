@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import GoBack from "../../components/GoBack";
+import GoBack from "../../components/Icons/back";
 
 const About = () => {
     return (

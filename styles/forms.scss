@@ -15,7 +15,7 @@ input {
   }
 }
 
-.submit-button {
+.default-button {
   padding: .6rem 1rem;
   border-radius: .6rem;
   border: .153rem solid $ColdColor;
@@ -41,4 +41,8 @@ textarea {
     box-shadow: 0 0 0 0.1rem #f2a7ad;
     border: 0.2rem solid #8c564a;
   }
+}
+
+.input-upload {
+
 }
